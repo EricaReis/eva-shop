@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { StylesProvider, MuiThemeProvider } from "@material-ui/core/styles";
+import Theme from "./styles/theme";
 
+import Routes from "./routes";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          eva-test
-        </p>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => (
+  <StylesProvider>
+    <MuiThemeProvider theme={Theme}>
+      <ThemeProvider theme={Theme}>
+        <Routes />
+      </ThemeProvider>
+    </MuiThemeProvider>
+  </StylesProvider>
+);
 
 export default App;

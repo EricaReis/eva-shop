@@ -9,7 +9,7 @@ const palette = {
       light: '#A566FF',
       dark: '#6526BF',
     },
-    background: {
+    backgrounds: {
       black: '#6FCF97',
       black1: '#6FCF971A',
       black2: '#fff',
