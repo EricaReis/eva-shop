@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/app.css";
 import { ThemeProvider } from "styled-components";
 import { StylesProvider, MuiThemeProvider } from "@material-ui/core/styles";
 import Theme from "./styles/theme";

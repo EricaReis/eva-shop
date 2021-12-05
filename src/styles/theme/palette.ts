@@ -10,9 +10,9 @@ const palette = {
       dark: '#6526BF',
     },
     backgrounds: {
-      black: '#6FCF97',
-      black1: '#6FCF971A',
-      black2: '#fff',
+      black: '#0C0C0D',
+      black1: '#252627',
+      black2: '#3C3E40',
       white: '#FDFDFD',
       white1: '#F7FAFF', 
       white2: '#DADFEB',
