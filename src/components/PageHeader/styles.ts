@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { Select, MenuItem, InputLabel, Input, InputAdornment, IconButton, FormControl } from '@material-ui/core';
+import Select from '@mui/material/Select';
+import Autocomplete from '@mui/material/Autocomplete';
+import { Input, IconButton, FormControl } from '@material-ui/core';
 
 export const Container = styled.div`
   display: flex;
@@ -24,6 +26,8 @@ export const ContainerContent = styled.div`
   display: flex;
   width: 80%;
 
+  justify-content: space-around;
+
   @media (max-width: 901px) {
     justify-content: center;
   }
@@ -38,6 +42,7 @@ export const StyledButton = styled.button`
     background-color: transparent;
     border-color: transparent;
     margin-left: 1.5rem;
+    width: 10rem;
     img {
         margin-left: 5px; 
         width: 14px;
@@ -76,12 +81,37 @@ export const ContainerIconMenu = styled.div`
 `;
 
 export const ContainerDesktop = styled.div`
-@media (max-width: 901px) {
-    button{
-      display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 901px) {
+      button{
+        display: none;
+      }
+      div {
+        display: none;
+      }
     }
-    div {
-      display: none;
-    }
+`;
+
+export const StyledSelect = styled(Select)`
+  width: 200px;
+  color: white;
+  div {
+    color: white;
+  }
+  svg {
+    color: white;
+  }
+`;
+
+export const StyledAutocomplete = styled(Select)`
+  width: 200px;
+  color: white;
+  div {
+    color: white;
+  }
+  svg {
+    color: white;
   }
 `;

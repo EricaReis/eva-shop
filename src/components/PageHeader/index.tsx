@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-import { Select, MenuItem, InputLabel, Input, InputAdornment, FormControl, IconButton } from '@material-ui/core';
+import { InputAdornment, IconButton } from '@material-ui/core';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/images/logo.png';
 import profile from '../../assets/icons/profile.png';
 import cart from '../../assets/icons/cart.png';
 import search from '../../assets/icons/search.png';
+
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import Icon from '@mdi/react';
 import {
   mdiMenu 
@@ -13,18 +19,15 @@ import {
 import SideDrawer from "./SideDrawer";
 
 
-import { Container, StyledButton, ContainerContent, StyledFormControl, StyledInput, ContainerIconMenu, ContainerDesktop } from './styles';
+import { Container, StyledButton, ContainerContent, StyledFormControl, StyledInput, ContainerIconMenu, ContainerDesktop, StyledSelect, StyledAutocomplete } from './styles';
 
-const categories = [
-  { name: 'Livros', id: 1 },
-  { name: 'Escritório', id: 2 },
-  { name: 'Vestuário', id: 3 },
-  { name: 'Informática', id: 4 },
-];
+const options = ['Livros', 'Escritório', 'Vestuário', 'Informática'];
 
 const PageHeader: React.FC = () => {
-  const [age, setAge] = React.useState('');
-  const [searchText, setSearchText] = React.useState<any>();
+  const [age, setAge] = useState('');
+  const [searchText, setSearchText] = useState<any>();
+  const [value, setValue] = useState<any>(options[0]);
+  const [inputValue, setInputValue] = useState<any>('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChange = (prop: any) => (event: any) => {
@@ -40,6 +43,36 @@ const PageHeader: React.FC = () => {
       <ContainerContent>
         <img src={logo} alt="Logo EVA"/>
         <ContainerDesktop>
+        <StyledSelect
+          labelId="demo-simple-select-standard-label"
+          id="demo-simple-select-standard"
+          value={age}
+          onChange={handleChange}
+          label="Categorias"
+          placeholder="Categorias"
+        >
+          <MenuItem value="sad">
+            <em>Categorias</em>
+          </MenuItem>
+          <MenuItem value={10}>Livros</MenuItem>
+          <MenuItem value={20}>Escritório</MenuItem>
+          <MenuItem value={30}>Vestuário</MenuItem>
+          <MenuItem value={30}>Informática</MenuItem>
+        </StyledSelect>
+        {/* <StyledAutocomplete
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+          inputValue={inputValue}
+          onInputChange={(event, newInputValue) => {
+            setInputValue(newInputValue);
+          }}
+          id="controllable-states-demo"
+          options={options}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Controllable" />}
+        /> */}
         <StyledInput
             type='text'
             onChange={handleChange}
