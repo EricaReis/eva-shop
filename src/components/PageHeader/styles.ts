@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   height: 4rem;
   background-color: ${props => props.theme.palette.backgrounds.black};  
+  z-index: 1;
 
   img {
     width: 70px;
