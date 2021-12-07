@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 export const Container = styled.div`
   display: flex;
   width: 100%;
+  justify-content: center;
   flex-direction: column;
 
   svg {
@@ -12,11 +13,18 @@ export const Container = styled.div`
   }
 `;
 
+export const ContainerCarousel = styled.div`
+  display: flex;
+  align-self: center;
+  width: 80%;
+`;
+
 export const ContainerProduct = styled.div`
   display: flex;
   width: 13rem;
   border-radius: 4px;
   flex-direction: column;
+  min-height: 412px;
 
   :hover {
     border: 1px solid ${props => props.theme.palette.primary.main};
@@ -68,9 +76,4 @@ export const ContainerInfo = styled.div`
     text-align: center;
     margin-top: 4px;
   }
-`;
-
-export const StyledSlider = styled(Slider)`
-  display: flex;
-  flex-direction: row;
 `;
