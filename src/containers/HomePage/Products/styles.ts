@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import Slider from 'react-slick';
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
 `;
 
 export const ContainerProduct = styled.div`
@@ -62,4 +68,9 @@ export const ContainerInfo = styled.div`
     text-align: center;
     margin-top: 4px;
   }
+`;
+
+export const StyledSlider = styled(Slider)`
+  display: flex;
+  flex-direction: row;
 `;

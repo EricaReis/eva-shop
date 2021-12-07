@@ -26,8 +26,4 @@ export const MyButton = styled.button`
   color: white;
   font-weight: 400;
   font-size: 1.2rem;
-
-  :hover {
-    background: darken(0.08, props.buttonColor);
-  }
 `;
