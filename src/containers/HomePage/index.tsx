@@ -5,6 +5,7 @@ import Cover from './Cover';
 import Benefits from './Benefits';
 import Sections from './Sections';
 import Products from './Products';
+import FormNews from "./FormNews";
 
 import { Container } from './styles';
 
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
       <Benefits/>
       <Sections/>
       <Products/>
+      <FormNews />
     </Container>
   );
 };

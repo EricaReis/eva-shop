@@ -26,4 +26,7 @@ export const MyButton = styled.button`
   color: white;
   font-weight: 400;
   font-size: 1.2rem;
+  width: 95%;
+  align-self: center;
+  margin-bottom: 10px;
 `;
