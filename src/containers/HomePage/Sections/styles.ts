@@ -24,6 +24,11 @@ export const ContainerTopics = styled.div`
         width: 230px;
         height: 256px;
     }
+    img:hover {
+        -webkit-filter: brightness(70%);
+        -webkit-transition: all 0.5s ease;
+        cursor: pointer;
+    }
     h1 {
         position: relative;
         top: -50px;

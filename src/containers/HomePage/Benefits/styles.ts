@@ -17,6 +17,10 @@ export const ContainerTopics = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    transition: transform 250ms;
+    :hover {
+    transform: translateY(-5px);
+    }
 
     .image {
         display: flex;

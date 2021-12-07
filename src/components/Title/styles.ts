@@ -14,4 +14,8 @@ export const Container = styled.div`
     border-top: 4px solid  ${(props) => props.theme.palette.primary.main};
     width: 55px;
   }
+
+  @media(max-width: 600px) {
+    padding-left: 1rem;
+  }
 `;
