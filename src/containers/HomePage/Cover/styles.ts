@@ -8,7 +8,23 @@ export const Container = styled.div`
   flex-direction: column;
   z-index: 0;
   margin: 0 auto;
-  margin-top: -50px;
+
+  @media (max-width: 800px) {
+    img {
+      width: 100%;
+    }
+    .desktop-cover {
+      display: none;
+    }
+  }
+
+  @media (min-width: 800px) {
+    margin-top: -50px;
+    
+    .mobile-cover {
+      display: none;
+    }
+  }
 `;
 
 export const ContainerCover = styled.div`
@@ -43,7 +59,6 @@ export const ContainerCover = styled.div`
       img {
         transform: scale(1.084);
         width: 100%;
-        margin-top: -42px;
       }
     }
 `;
