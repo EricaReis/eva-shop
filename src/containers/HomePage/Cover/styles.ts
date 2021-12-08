@@ -33,6 +33,18 @@ export const ContainerCover = styled.div`
       margin-top: -42px;
     }
   }
+
+  @media (min-width: 1340px) {
+    .mobile-cover {
+      display: none;
+    }
+
+      img {
+        transform: scale(1.084);
+        width: 100%;
+        margin-top: -42px;
+      }
+    }
 `;
 
 export const ContainerText = styled.div`
