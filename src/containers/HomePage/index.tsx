@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
       <Cover/>
       <Benefits/>
       <Sections/>
-      {/* <Products/> */}
+      <Products/>
       <FormNews />
       <Footer />
     </Container>

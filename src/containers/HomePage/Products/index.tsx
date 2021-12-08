@@ -12,7 +12,7 @@ const Products: React.FC = () => {
     <Container>
         <Highlights />
         <Bookstore />
-        <Desk />
+        {/* <Desk /> */}
         <Clothing />
     </Container>
   );

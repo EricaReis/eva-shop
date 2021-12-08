@@ -18,18 +18,6 @@ export const ContainerCarousel = styled.div`
   padding-top: 4rem;
   align-self: center;
   width: 80%;
-
-  .alice-carousel__next-btn-item {
-    display: flex;
-    position: relative;
-    top: -250px;
-    left: 500px;
-  }
-  .alice-carousel__prev-btn-item {
-    position: relative;
-    right: 500px;
-    top: -250px;
-  }
 `;
 
 export const ContainerProduct = styled.div`
@@ -109,3 +97,4 @@ export const ContainerInfo = styled.div`
     margin-top: 4px;
   }
 `;
+

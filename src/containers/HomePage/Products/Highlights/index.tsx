@@ -1,31 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useTheme, Theme } from '@material-ui/core/styles';
 
-import Icon from '@mdi/react';
 import Title from '../../../../components/Title';
-import Button from '../../../../components/Buttons/Button';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
-import { Container, ContainerProduct, ContainerInfo, ContainerCarousel} from './styles';
+import { Container } from './styles';
 import { IProduct } from '../../models';
-
 import api from '../../services';
+import Carousel from "../../../../components/Carousel";
 
 const Highlights: React.FC = () => {
-  const { palette } = useTheme() as Theme;
-  const [activeIndex, setActiveIndex] = useState(0);
   const [infoCategories, setInfoCategories] = useState<IProduct[]>();
-
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 4 },
-};
-
-const slidePrev = () => setActiveIndex(activeIndex - 1);
-const slideNext = () => setActiveIndex(activeIndex + 1);
 
   const getCategoriesInfo = async (): Promise<void> => {
     try {
@@ -42,28 +24,10 @@ const slideNext = () => setActiveIndex(activeIndex + 1);
 
   return (
     <Container>
-    <Title titleSection="Destaques" />
-    <ContainerCarousel>
-    <AliceCarousel mouseTracking responsive={responsive}  autoPlay items={infoCategories} activeIndex={activeIndex} autoPlayInterval={5000} disableDotsControls>
-    {infoCategories && infoCategories.map(product => (
-      <ContainerProduct>
-        <div className="container-image">
-          <img width="100%" src={product.images[0]?.path} alt="Imagem do Produto"/>    
-        </div> 
-          <ContainerInfo>   
-            <span>{product.name}</span>
-            <p className="old-price">{`R$${Number(product.price).toFixed(2)}`}</p>
-            <p className="promotional-price">{`R$${Number(product.promotional_price).toFixed(2)}`}</p>
-            <p className="discount">{`Ou R$${(Number(product.promotional_price) * 0.85).toFixed(2)} com 15% off no boleto`}</p>
-          </ContainerInfo>
-          <Button buttonText='Comprar'/>
-        </ContainerProduct>
-      ))}
-
-
-      </AliceCarousel>
-      </ContainerCarousel>
-
+      <Title titleSection="Destaques" />
+        {infoCategories && infoCategories.length > 3 && (
+          <Carousel infoCategories={infoCategories}></Carousel>
+        )}
     </Container>
   );
 };
