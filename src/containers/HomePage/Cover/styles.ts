@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   z-index: 0;
   margin: 0 auto;
+  margin-top: -50px;
 `;
 
 export const ContainerCover = styled.div`

@@ -26,7 +26,7 @@ const Clothing: React.FC = () => {
     <Container>
       <Title titleSection="Destaques em vestuário" />
         {infoCategories && infoCategories.length > 3 && (
-          <Carousel infoCategories={infoCategories}></Carousel>
+          <Carousel infoCategories={infoCategories}/>
         )}
     </Container>
   );

@@ -32,7 +32,6 @@ const Carousel: React.FC<Props> = ({infoCategories}) => {
   return (
     <Container>
     <ContainerCarousel>
-      {console.log(infoCategories)}
       <AliceCarousel 
         mouseTracking 
         responsive={responsive}  

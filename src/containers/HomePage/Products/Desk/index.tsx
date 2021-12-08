@@ -26,7 +26,7 @@ const Desk: React.FC = () => {
     <Container>
       <Title titleSection="Destaques em escritório" />
         {infoCategories && infoCategories.length > 3 && (
-          <Carousel infoCategories={infoCategories}></Carousel>
+          <Carousel infoCategories={infoCategories}/>
         )}
     </Container>
   );
