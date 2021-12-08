@@ -30,6 +30,11 @@ export const Container = styled.div`
             color: ${props => props.theme.palette.backgrounds.white};
             font-size: 1.6rem;
         }
+
+        @media( max-width: 700px) {
+            text-align: center;
+            width: 80% ;
+        }
     }
 
     .content-input {
@@ -44,6 +49,14 @@ export const Container = styled.div`
             width: 16rem;
             margin-left: 1rem;
         }
+
+        @media( max-width: 700px) {
+            flex-direction: column;
+
+            input {
+                margin-bottom: 1rem;
+            }
+        }
     }
 
     .button-news {
@@ -52,6 +65,6 @@ export const Container = styled.div`
         align-self: center;
         margin-top: 3rem;
         margin-bottom: 3rem;
-        width: 30%;
+        width: 300px;
     }
 `;

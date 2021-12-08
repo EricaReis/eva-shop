@@ -1,6 +1,7 @@
 import React from "react";
 
 import CoverImage from "../../../assets/images/cover-header.png";
+import CoverImageMobile from "../../../assets/images/cover-header-mobile.png";
 import { Container, ContainerCover, ContainerText } from "./styles";
 
 const Cover: React.FC = () => {
@@ -16,7 +17,11 @@ const Cover: React.FC = () => {
           src={CoverImage}
           alt="Capa da página Home"
         />
-
+        <img
+          className="mobile-cover"
+          src={CoverImageMobile}
+          alt="Segunda Capa"
+        />
       </ContainerCover>
     </Container>
   );

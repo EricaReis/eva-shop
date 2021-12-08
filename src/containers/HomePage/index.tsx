@@ -1,6 +1,7 @@
 import React from "react";
 
 import PageHeader from '../../components/PageHeader';
+import Footer from '../../components/Footer';
 import Cover from './Cover';
 import Benefits from './Benefits';
 import Sections from './Sections';
@@ -16,8 +17,9 @@ const HomePage: React.FC = () => {
       <Cover/>
       <Benefits/>
       <Sections/>
-      <Products/>
+      {/* <Products/> */}
       <FormNews />
+      <Footer />
     </Container>
   );
 };

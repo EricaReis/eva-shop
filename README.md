@@ -2,7 +2,7 @@
 
 ComiXtore is a fictious e-commerce made with Typescript and ReactJS.
 
-To run the app you can access [link] or follow the steps below:
+To run the app you can follow the steps below:
 
 First, clone the project:
 
@@ -33,8 +33,6 @@ The following tools were used in the development of the ComiXtore application:
 - [React](https://pt-br.reactjs.org/)
 
 - [Typescript](https://www.typescriptlang.org)
-
-## Deployed at: [Deploy]([link deploy])
 
 ## Developer
 
