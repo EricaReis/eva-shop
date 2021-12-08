@@ -30,7 +30,7 @@ export const ContainerCover = styled.div`
 
     img {
       width: 100%;
-
+      transform: scale(1.084);
       margin-top: -42px;
     }
   }
