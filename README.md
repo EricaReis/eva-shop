@@ -1,6 +1,6 @@
 ## Getting Started
 
-ComiXtore is a fictious e-commerce made with Typescript and ReactJS.
+Eva Shop is a fictious e-commerce made with Typescript and ReactJS.
 
 To run the app you can follow the steps below:
 
