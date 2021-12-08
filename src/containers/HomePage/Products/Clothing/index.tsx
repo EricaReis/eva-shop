@@ -13,7 +13,7 @@ import { IProduct } from '../../models';
 
 import api from '../../services';
 
-const Bookstore: React.FC = () => {
+const Clothing: React.FC = () => {
   const { palette } = useTheme() as Theme;
   const [activeIndex, setActiveIndex] = useState(0);
   const [infoCategories, setInfoCategories] = useState<IProduct[]>();
@@ -30,7 +30,7 @@ const slideNext = () => setActiveIndex(activeIndex + 1);
   const getCategoriesInfo = async (): Promise<void> => {
     try {
       const infoc = await api.getCategories();
-      setInfoCategories(infoc[0].product);
+      setInfoCategories(infoc[3].product);
     } catch (err) {
       console.log(err);
     }
@@ -42,7 +42,7 @@ const slideNext = () => setActiveIndex(activeIndex + 1);
 
   return (
     <Container>
-    <Title titleSection="Destaques em livros" />
+    <Title titleSection="Destaques em vestuário" />
     <ContainerCarousel>
     <AliceCarousel mouseTracking responsive={responsive}  autoPlay items={infoCategories} activeIndex={activeIndex} autoPlayInterval={5000} disableDotsControls>
     {infoCategories && infoCategories.map(product => (
@@ -68,4 +68,4 @@ const slideNext = () => setActiveIndex(activeIndex + 1);
   );
 };
 
-export default Bookstore;
+export default Clothing;

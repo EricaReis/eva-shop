@@ -2,6 +2,8 @@ import React from "react";
 
 import Highlights from './Highlights';
 import Bookstore from './Bookstore';
+import Desk from './Desk';
+import Clothing from './Clothing';
 import { Container } from './styles';
 
 const Products: React.FC = () => {
@@ -10,6 +12,8 @@ const Products: React.FC = () => {
     <Container>
         <Highlights />
         <Bookstore />
+        <Desk />
+        <Clothing />
     </Container>
   );
 };

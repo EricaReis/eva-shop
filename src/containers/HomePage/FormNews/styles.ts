@@ -31,4 +31,27 @@ export const Container = styled.div`
             font-size: 1.6rem;
         }
     }
+
+    .content-input {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding-top: 3rem;
+
+        input {
+            border-radius: 4px;
+            height: 2rem;
+            width: 16rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .button-news {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: 30%;
+    }
 `;

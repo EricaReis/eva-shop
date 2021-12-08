@@ -7,6 +7,8 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   z-index: 0;
+  max-width: 1366px;
+  margin: 0 auto;
 `;
 
 export const ContainerCover = styled.div`
@@ -14,7 +16,7 @@ export const ContainerCover = styled.div`
   z-index: 0;
  
   img {
-    transform: scale(1.05) matrix(1, -0.05, 0.07, 1, 0, 0);
+    margin-top: -38px;
     width: 100%;
     height: 100%;
   }

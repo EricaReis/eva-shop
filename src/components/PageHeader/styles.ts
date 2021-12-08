@@ -97,12 +97,17 @@ export const ContainerDesktop = styled.div`
 
 export const StyledSelect = styled(Select)`
   width: 200px;
+  margin-left: 2rem;
   color: white;
   div {
     color: white;
   }
   svg {
     color: white;
+  }
+  .MuiMenu-list {
+    display: flex; 
+    flex-direction: column;
   }
 `;
 

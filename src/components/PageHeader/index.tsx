@@ -44,21 +44,20 @@ const PageHeader: React.FC = () => {
         <img src={logo} alt="Logo EVA"/>
         <ContainerDesktop>
         <StyledSelect
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={age}
+          defaultValue={10}
           onChange={handleChange}
           label="Categorias"
           placeholder="Categorias"
         >
-          <MenuItem value="sad">
-            <em>Categorias</em>
+          <MenuItem value={10}>
+            Categorias
           </MenuItem>
-          <MenuItem value={10}>Livros</MenuItem>
-          <MenuItem value={20}>Escritório</MenuItem>
-          <MenuItem value={30}>Vestuário</MenuItem>
-          <MenuItem value={30}>Informática</MenuItem>
+          <MenuItem value={20}>Livros</MenuItem>
+          <MenuItem value={30}>Escritório</MenuItem>
+          <MenuItem value={40}>Vestuário</MenuItem>
+          <MenuItem value={50}>Informática</MenuItem>
         </StyledSelect>
+
         {/* <StyledAutocomplete
           value={value}
           onChange={(event, newValue) => {
